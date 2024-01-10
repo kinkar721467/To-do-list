@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+.conatiner {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg,#154477,#5f0812);
+    padding: 20px;
+}
+
+.to-do-list-app {
+   width: 100%;
+   max-width: 450px;
+   background: #fff;
+   margin: 100px auto 0;
+   padding: 2rem;
+   border-radius: 2rem;
+   border: none;
+}
+
+#app-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #5f0812;
+}
+
+#app-title img {
+    height: 2rem;
+}
+
+.add-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.50rem;
+}
+
+#input-box,#input-btn {
+    height: 2.55rem;
+    border: none;
+    outline: none;
+    background-color: #E8F0FE;
+    border-radius: 2rem;
+}
+
+#input-box {
+    width: 80%;
+    padding: 1rem;
+}
+
+#input-btn {
+    width: 20%;
+    background: linear-gradient(135deg,#154477,#5f0812);
+    color: white;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1rem;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.check {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.check::before {
+    background-image: url('images/checked.png');
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    #app-title {
+        font-size: 1.55rem;
+    }
+    #app-title img {
+        height: 1.55rem;
+    }
+    
+}
